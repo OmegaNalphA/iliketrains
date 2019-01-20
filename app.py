@@ -30,12 +30,13 @@ def sendtxt():
 
     message = client.messages \
                     .create(
-                        body="Join Earth's mightiest heroes. Like Kevin Bacon.",
-                        from_='+14086406421',
+                        body="Here's your stop!",
+                        from_='+15127467134',
                         to='+14086406421'
                     )
 
-    print(message.sid)
+    html = "<h3>Hello {name}!</h3>" "<b>Hostname:</b> {hostname}<br/>"
+    return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname())
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
