@@ -1,3 +1,4 @@
+Firebase_Admin
 Flask
 Redis
 Twilio
