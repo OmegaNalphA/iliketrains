@@ -9,7 +9,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 
 # Connect to Firebase and set-up database references
-cred = credentials.Certificate('iliketrains_account_key.json')
+cred = credentials.Certificate('./env/iliketrains_firebase_key.json')
 firebase_admin.initialize_app(cred, {
    'databaseURL' : 'https://iliketrains-1919.firebaseio.com/'
 })
