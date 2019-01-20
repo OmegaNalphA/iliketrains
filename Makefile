@@ -1,6 +1,6 @@
 default:
 	docker build -t iliketrains .
-	docker run -d -p 4000:80 iliketrains
+	docker run -p 4000:80 iliketrains
 TOSTOP := $(shell docker ps -q --filter ancestor=iliketrains)
 stop:
 	docker stop $(TOSTOP)
